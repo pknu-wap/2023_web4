@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Logiclab</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header_logo">               
+                <h1><a href="Logiclab.html">Logiclab</a></h1>               
+            </div>
+    
+            <nav class="header_menu">
+                <ul>
+                    <li><a href="makingquestions.html">문제만들기</a></li>
+                    <li><a href="#">순위</a></li>
+                </ul>           
+            </nav>
+            <div class="header_member" onclick="redirectToNewPage('page1.html');">
+                <a href="#">로그인</a>
+            </div>
+        </header>
+    </div>
+        <div class="top-controls">
+            <div class="select-form" >
+                <select>
+                    <option value="">전체</option>
+                    <option value="">수열</option>
+                    <option value="">디지털 숫자</option>
+                    <option value="">도형</option>
+                    <option value="">영어</option>
+                    <option value="">카드</option>
+                    <option value="">함수</option>
+                </select>
+            </div>
+        
+            <div class="search-form">
+                <input type="text"  placeholder="문제 검색" />
+                <button>search</button>
+            </div>
+            <div class="card-container">
+                <div class="card" onclick="redirectToNewPage('page1.html');">
+                  <!-- 카드 반복을 위한 JavaScript 코드 -->
+                </div>
+              </div>
+              
+              <script>
+                for (var i = 1; i <= 6; i++) {
+                  document.write(`
+                    <div class="card" onclick="redirectToNewPage('page${i}.html');">
+                      <img src="https://img.example.com/card${i}.jpg" alt="카드 ${i}">
+                      <h2>카드 ${i}</h2>
+                      <p>카드 ${i} 설명</p>
+                    </div>
+                  `);
+                }
+              </script>
+        <div class="page">
+            <ul class="pagination modal">
+                <li> <a href="#" class="first">처음 페이지</a></li>
+                <li> <a href="#" class="arrow lieft"><<<</a></li>
+                <li> <a href="#" class="active num">1</a></li>
+                <li> <a href="#" class="num">2</a></li>
+                <li> <a href="#" class="num">3</a></li>
+                <li> <a href="#" class="num">4</a></li>
+                <li> <a href="#" class="num">5</a></li>
+                <li> <a href="#" class="arrow right">>></a></li>
+                <li> <a href="#" class="last">마지막 페이지</a></li>
+            </ul>
+        </div>       
+        
+<footer></footer> 
+</body>
+</html>

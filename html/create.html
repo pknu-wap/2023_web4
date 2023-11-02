@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Logiclab</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header_logo">               
+                <h1><a href="Logiclab.html">Logiclab</a></h1>               
+            </div>
+      
+            <nav class="header_menu">
+                <ul>
+                    <li><a href="makingquestions.html">문제만들기</a></li>
+                    <li><a href="#">순위</a></li>
+                </ul>           
+            </nav>
+            <div class="header_member" onclick="redirectToNewPage('page1.html');">
+                <a href="#">로그인</a>
+            </div>
+        </header>
+    </div>
+    <div id="create-problem-form">
+        <h2><a href="makingquestions.html">문제 만들기</a></h2>
+        <form>                    
+            <!-- 문제 폼 내용을 그대로 둡니다. -->
+              
+            <label for="problem-title">문제 제목:</label>
+            <input type="text" id="problem-title" name="problem-title" required />
+
+                <!-- 파일 업로드 입력 필드 추가 -->
+            <label for="file-upload">첨부 파일:</label>
+            <input type="file" id="file-upload" name="file-upload" accept=".pdf,.doc,.docx,.jpg,.png" />
+
+            <label for="problem-description">문제 설명:</label>
+            <textarea id="problem-description" name="problem-description" rows="4" required></textarea>
+
+            <label for="answer">정답 입력:</label>
+            <input type="text" id="answer" name="answer" required />
+
+
+    </div>
+
+    <ul id="tag-list">
+    </ul>
+
+       <!-- 수정/삭제/확인 버튼 추가 -->
+<div id="action-buttons">
+    <button type="submit">확인</button>
+    <button type="button" id="edit-button">수정</button>
+    <button type="button" id="delete-button">삭제</button>
+</div>
+
+
+<footer></footer>    
+</body>
+</html>

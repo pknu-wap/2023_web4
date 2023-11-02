@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="question">
+        <h1 id="questionTitle">문제 제목</h1>
+        <img id="questionImage" src="" alt="문제 이미지">
+        <p id="questionDescription">문제에 대한 설명</p>
+        <input type="text" id="answerInput" placeholder="정답을 입력하세요">
+        <button onclick="checkAnswer()">정답 확인</button>
+    </div>
+    <div id="solution" class="hidden">
+        <h2>정답입니다!</h2>
+        <p>문제 풀이를 등록하세요.</p>
+        <textarea id="solutionText"></textarea>
+        <button onclick="submitSolution()">풀이 제출</button>
+    </div>
+    <div id="wrongAnswer" class="hidden">
+        <p>틀렸습니다. 다시 시도하세요.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
