@@ -17,10 +17,113 @@ var template = {
       <!DOCTYPE html>
       <html lang="ko">
       <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Logic Lab${title}</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logic Lab${title}</title>
+        <style>
+        
+      
+      a {
+          text-decoration: underbar;
+          color: #000;
+      }
+      ul{
+          list-style: none;
+      }
+      
+      .container {
+          padding: 0 20px;
+          margin: 0 auto;
+          min-width: 1160px;
+      }
+      
+      header {
+          width: 100%;
+          height: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+          box-sizing: border-box;
+          border-bottom: 1px solid #ccc;
+      }
+      
+      /*로고*/
+      .header_logo {
+          width: 20%;
+          font-size: 30px;
+          font-weight: 700;
+          text-transform: uppercase;
+      }
+      
+      /*네비게이션*/
+      .header_menu {
+          width: 60%;
+          text-align: center;
+      }
+      
+      .header_menu li {
+          display: inline-block;
+      }
+      
+      .header_menu li a { 
+          padding: 13px 30px;
+          margin: 0 5px;
+          transition: background-color 0.3s;
+      }
+      
+      .header_menu li:hover {
+          background-color: #f1f1f1;
+          border-radius: 5px;
+      }
+      
+      
+      
+      /*셀렉터, 검색*/
+      .select-form, .search-form {
+          margin-top: 20px; /* 위 여백 설정 (원하는 여백 크기로 조정) */
+          
+          display: inline-block; /* 요소를 나란히 표시 */
+          vertical-align: middle; /* 수직 가운데 정렬 */
+          margin-right: 10px; /* 요소 간격 조절 */
+      }
+      
+          
+      /* 셀렉트 박스 스타일 */
+      .select-form select {
+          padding: 10px;
+          border: 1px solid #ccc;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          font-size: 14px;
+          width: 150px; /* 셀렉트 박스의 너비 조정 (원하는 크기로 설정) */
+      }
+      
+      /* 검색 폼 스타일 */
+      
+      .search-form input[type="text"] {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          width: 200px; /* 검색 입력 필드 너비 조정 (원하는 크기로 설정) */
+          font-size: 14px;
+      }
+      .search-form button {
+              padding: 10px 20px;
+              background-color: rgb(0, 0, 0);
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 14px;
+      }
+      
+    
+
+        </style>
       </head>
       <body>
           <div class="container">
@@ -243,18 +346,55 @@ var app = http.createServer(function (request, response) {
 
     <script src="script.js"></script>
     <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            padding: 20px 0;
+            font-size: 32px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-        }
-
-        table, th, td {
-            border: 1px solid black;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         th, td {
-            padding: 10px;
+            padding: 15px;
             text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+        a {
+            text-decoration: none;
+            color: #333; /* 사용자 이름에 대한 링크 색상 */
+            font-weight: bolder;
         }
     </style>
     `;
@@ -269,6 +409,71 @@ var app = http.createServer(function (request, response) {
     var body0 = `
       <header>
         <h2>Login</h2>
+        <style>
+        header{
+          display:flex;
+          justify-content: center;
+      }
+      form{
+          padding:10px;
+      }
+      .input-box{
+          position:relative;
+          margin:10px 0;
+      }
+      .input-box > input{
+          background:transparent;
+          border:none;
+          border-bottom: solid 1px #ccc;
+          padding:20px 0px 5px 0px;
+          font-size:14pt;
+          width:100%;
+      }
+      input::placeholder{
+          color:transparent;
+      }
+      input:placeholder-shown + label{
+          color:#aaa;
+          font-size:14pt;
+          top:15px;
+
+      }
+      input:focus + label, label{
+          color:#8aa1a1;
+          font-size:10pt;
+          pointer-events: none;
+          position: absolute;
+          left:0px;
+          top:0px;
+          transition: all 0.2s ease ;
+          -webkit-transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
+          -o-transition: all 0.2s ease;
+      }
+
+      input:focus, input:not(:placeholder-shown){
+          border-bottom: solid 1px #8aa1a1;
+          outline:none;
+      }
+      input[type=submit]{
+          background-color: #000000;
+          border:none;
+          color:white;
+          border-radius: 5px;
+          width:100%;
+          height:35px;
+          font-size: 14pt;
+          margin-top:100px;
+      }
+      #forgot{
+          text-align: right;
+          font-size:12pt;
+          color:rgb(164, 164, 164);
+          margin:10px 0px;
+          display: inline-block; /* 요소를 가로로 정렬합니다. */
+          margin-right: 20px; /* 각 요소 사이의 간격을 조절합니다. */
+      }
+        </style>
       </header>
 
       <form action="" method="POST">
