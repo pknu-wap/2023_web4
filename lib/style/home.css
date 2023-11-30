@@ -1,0 +1,128 @@
+/* ./lib/style/home.css */
+a {
+    text-decoration: none; /* 언더바 없애기 */
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    min-width: 1160px;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+
+/*로고*/
+.header_logo {
+    width: 20%;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*네비게이션*/
+.header_menu {
+    width: 60%;
+    text-align: center;
+}
+
+.header_menu li {
+    display: inline-block;
+}
+
+.header_menu li a { 
+    padding: 13px 30px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.header_menu li:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+
+
+/*셀렉터, 검색*/
+.select-form, .search-form {
+    margin-top: 20px; /* 위 여백 설정 (원하는 여백 크기로 조정) */
+    
+    display: inline-block; /* 요소를 나란히 표시 */
+    vertical-align: middle; /* 수직 가운데 정렬 */
+    margin-right: 10px; /* 요소 간격 조절 */
+}
+
+    
+/* 셀렉트 박스 스타일 */
+.select-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    width: 150px; /* 셀렉트 박스의 너비 조정 (원하는 크기로 설정) */
+}
+
+  /* 카드 컨테이너 */
+  .card-container {
+      clear: both; /* 이전 요소 아래로 내려가도록 설정 */
+  }
+  /*카드*/
+  .card{
+      width: calc(30% - 20px); /* 카드 너비 설정 (여백 고려) */
+      background: #f5f5f5;
+      padding: 24px;
+      margin: 20px 10px 0; /* 위 여백을 주고 왼쪽, 오른쪽 여백 조절 */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      float: left; /* 카드를 왼쪽으로 부유시켜 나열 */
+  }
+  /* 이미지 스타일 */
+  .card img {
+    width: 550px; /* 이미지를 카드 너비에 맞게 설정 */ 
+    height: 300px;    
+    max-width: 100%; /* 최대 너비 설정 */
+  }
+  /* 제목 스타일 */
+  .card h2 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+  }
+  /* 내용 스타일 */
+  .card p {
+      margin-top: 5px;
+      font-size: 1rem;
+  }
+  button {
+    background-color: #c7c8c8;
+    color: white;
+    padding: 9px 16px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: rgb(193, 193, 193)C6E; 
+    color: white;
+}
