@@ -64,7 +64,7 @@
     /* 셀렉터, 검색 스타일 */
     .select-form,
     .search-form {
-        margin-top: 20px; /* 위 여백 설정 */
+        margin-top: 20px; /* 위 여백 설정  */
         display: inline-block;
         vertical-align: middle;
         margin-right: 10px;

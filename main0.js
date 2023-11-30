@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session')
 const bodyParser = require('body-parser');
 const multer = require('multer');
-// 이미지를 저장할 디렉터리 및 파일 이름 설정
+// 이미지를 저장할 디렉터리 및 파일 이름  설정
 const storage = multer.diskStorage({
   destination: './uploads/',
   filename: function (request, file, cb) {

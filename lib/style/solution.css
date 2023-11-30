@@ -202,7 +202,7 @@ input[type="submit"][value="delete"] {
   text-decoration: none;
   width: 100px; /* 버튼 너비 고정 */
   height: 50px; /* 버튼 높이 고정 */
-  line-height: 30px; /* 텍스트를 버튼 중앙에 위치시키기 위해 */
+  line-height: 30px; /* 텍스트를 버튼 중앙에 위치시키기  위해 */
   text-align: center; /* 텍스트를 버튼 중앙에 위치시키기 위해 */
   font-size: 18px; /* 텍스트 크기 조정 */
 }
