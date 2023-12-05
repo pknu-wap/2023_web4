@@ -1,0 +1,65 @@
+mysql> use logiclab;
+Database changed
+mysql> show tables;
++--------------------+
+| Tables_in_logiclab |
++--------------------+
+| category           |
+| question           |
+| solution           |
+| user               |
++--------------------+
+4 rows in set (0.01 sec)
+
+mysql> desc category;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| category | varchar(100) | NO   | PRI | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+1 row in set (0.01 sec)
+
+mysql> desc question;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int          | NO   | PRI | NULL    | auto_increment |
+| user_id     | varchar(20)  | NO   |     | NULL    |                |
+| title       | varchar(20)  | NO   |     | NULL    |                |
+| description | text         | NO   |     | NULL    |                |
+| image       | varchar(255) | YES  |     | NULL    |                |
+| answer      | varchar(20)  | YES  |     | NULL    |                |
+| category    | varchar(100) | NO   |     | NULL    |                |
+| created     | datetime     | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> desc solution;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| id          | int         | NO   | PRI | NULL    | auto_increment |
+| question_id | varchar(20) | YES  |     | NULL    |                |
+| user_id     | varchar(20) | YES  |     | NULL    |                |
+| description | text        | NO   |     | NULL    |                |
+| created     | datetime    | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> desc user;
++-------------------+--------------+------+-----+---------+----------------+
+| Field             | Type         | Null | Key | Default | Extra          |
++-------------------+--------------+------+-----+---------+----------------+
+| id                | int          | NO   | PRI | NULL    | auto_increment |
+| user_id           | varchar(10)  | NO   | UNI | NULL    |                |
+| password          | varchar(20)  | NO   |     | NULL    |                |
+| nickname          | varchar(20)  | NO   | UNI | NULL    |                |
+| image             | varchar(255) | NO   |     | NULL    |                |
+| birth             | varchar(10)  | NO   |     | NULL    |                |
+| q_pw              | varchar(100) | NO   |     | NULL    |                |
+| a_pw              | varchar(100) | NO   |     | NULL    |                |
+| created           | datetime     | NO   |     | NULL    |                |
+| correct_answers   | int          | YES  |     | 0       |                |
+| created_questions | int          | YES  |     | 0       |                |
++-------------------+--------------+------+-----+---------+----------------+
+11 rows in set (0.00 sec)
